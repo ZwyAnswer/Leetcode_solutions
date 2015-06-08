@@ -16,11 +16,30 @@ public class Solution {
             int levelNum = queue.size();
             for(int i = 0; i < levelNum; i++) {
                 TreeNode node = queue.poll();
-                if( i == 0) result.add(node.val);
+                if( i == 0) result.add(node.val);  //每层第一个节点加入结果数组
                 if(node.right != null) queue.add(node.right);
                 if(node.left != null) queue.add(node.left);
             }
         }
         return result;
+    }
+	
+	/**
+		DFS实现版本，参考层次遍历的DFS版本
+	**/
+	public List<Integer> rightSideView(TreeNode root) {
+        List<Integer> result = new ArrayList<> ();
+        if(root == null) return result;
+        dfs(root, result, 0);
+        return result;
+    }
+    
+    private void dfs(TreeNode node, List<Integer> result, int level) {
+        if(node == null) return;
+        if(result.size() <= level) {  //只需在第一次遍历到某层的时候，加入第一个结点值
+            result.add(node.val);    
+        }
+        dfs(node.right, result, level+1);
+        dfs(node.left, result, level+1);
     }
 }
