@@ -1,9 +1,9 @@
 /**
-	题目地址：https://leetcode.com/problems/implement-trie-prefix-tree/
-	实现Trie字典树。其主要特点有：
-	根节点不包含字符，除根节点外每一个节点都只包含一个字符； 
-	从根节点到某一节点，路径上经过的字符连接起来，为该节点对应的字符串； 
-	每个节点的所有子节点包含的字符都不相同。
+ *	题目地址：https://leetcode.com/problems/implement-trie-prefix-tree/
+ *	实现Trie字典树。其主要特点有：
+ *	根节点不包含字符，除根节点外每一个节点都只包含一个字符； 
+ *	从根节点到某一节点，路径上经过的字符连接起来，为该节点对应的字符串； 
+ *	每个节点的所有子节点包含的字符都不相同。
 **/
 
 class TrieNode {
@@ -54,7 +54,7 @@ public class Trie {
     }
     
 	/**
-		因为不论查找最长前缀还是搜索完整单词，均涉及树节点的查找，故单独出一个查找节点的函数
+	 *	因为不论查找最长前缀还是搜索完整单词，均涉及树节点的查找，故单独出一个查找节点的函数
 	**/
     private TrieNode findNode(String s){
         if( s == null || s.length() == 0) return null;
