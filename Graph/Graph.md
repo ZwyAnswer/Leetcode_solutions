@@ -11,7 +11,7 @@ DFS写法简单，但有时效率低。如果要访问图中所有结点，或�
 	void search(Node root) {
 		if(root == null) return;
 		visit(root);
-		root.visited = true;
+		root.visited = true;  //使用visited标记来避免图中含环，无限循环
 		for( Node n : root.adjacent) {
 			if(n.visited == false)
 				search(n);
@@ -26,7 +26,7 @@ BFS实现的关键在于队列的使用
 <!-- lang:java -->
 	void search(Node root) {
 		if(root == null) return;
-		Queue<Node> queue = new LinkedList<> ();
+		Queue<Node> queue = new LinkedList<> ();  //注意队列的使用
 		visit(root);
 		root.visited = true;
 		queue.add(root);

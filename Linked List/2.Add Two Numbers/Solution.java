@@ -1,6 +1,6 @@
 /**
-	两个链表相加，注意链表保存是先存低位再存高位，所以做加法的进位方向也同正常加法相反。
-	题目地址：https://leetcode.com/problems/add-two-numbers/
+ *	两个链表相加，注意链表保存是先存低位再存高位，所以做加法的进位方向也同正常加法相反。
+ *	题目地址：https://leetcode.com/problems/add-two-numbers/
 **/
 public class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
