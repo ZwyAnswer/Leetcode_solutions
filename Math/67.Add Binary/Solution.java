@@ -1,8 +1,13 @@
+/**
+ * 给两个字符串表示二进制数，返回其二进制和的字符串
+ * 题目地址：https://leetcode.com/problems/add-binary/
+ * 类似题目：Multiply Strings，Plus One
+**/
 public class Solution {
 	/**
-		实现二进制加法，按照正常的加法进位（逢2进位）规则进行计算。
-		从右至左遍历数字，可以参照Plus One的十进制加法。
-		runtime:329 ms
+	 *	实现二进制加法，按照正常的加法进位（逢2进位）规则进行计算。
+	 *	从右至左遍历数字，可以参照Plus One的十进制加法。
+	 *	runtime:329 ms
 	**/
     public String addBinary(String a, String b) {
         if(a == null || a.isEmpty()) return b;
@@ -13,8 +18,8 @@ public class Solution {
         
         for(int i=0; i <n; i++) {
 			/**
-				分情况做加法：a,b均能取到数字位，a更长时，则只取的到a的数字位。b更长时同理。
-				注意结果数组的保存，是先存低位结果。即与取a,b的遍历方向相反。
+			 *	分情况做加法：a,b均能取到数字位，a更长时，则只取的到a的数字位。b更长时同理。
+			 *	注意结果数组的保存，是先存低位结果。即与取a,b的遍历方向相反。
 			**/
             int aIndex = a.length()-1-i, bIndex = b.length()-1-i;  //从低位向高位遍历a,b
             if( aIndex >= 0 && bIndex >= 0 ) {
@@ -40,9 +45,9 @@ public class Solution {
     }
 	
 	/**
-		使用异或方法来做二进制运算，设a,b的第i位分别为ai,bi，i位的进位为carry
-		ai ^ bi ^ carry 的结果正好符合二进制加法的规则
-		runtime: 311 ms (两个方法的时间复杂度均为O(n),n为max(a.length(),b.length())
+	 *	使用异或方法来做二进制运算，设a,b的第i位分别为ai,bi，i位的进位为carry
+	 *	ai ^ bi ^ carry 的结果正好符合二进制加法的规则
+	 *	runtime: 311 ms (两个方法的时间复杂度均为O(n),n为max(a.length(),b.length())
 	**/
 	public String addBinary2(String a, String b) {
         if(a == null || a.isEmpty()) return b;
@@ -57,8 +62,8 @@ public class Solution {
         StringBuilder sb = new StringBuilder();
         
 		/**
-			只要能取到a，b的有效位则继续遍历计算
-			carry = 1的循环条件，实际上是针对取不到 a,b有效位时，依然有进位的情况，此时结果最高位为1。
+		 *	只要能取到a，b的有效位则继续遍历计算
+		 *	carry = 1的循环条件，实际上是针对取不到 a,b有效位时，依然有进位的情况，此时结果最高位为1。
 		**/
         while( i >= 0 || j >= 0 || carry == 1) {  
             numA = ( i >= 0) ? Character.getNumericValue(a.charAt(i--)) : 0;  //为了统一异或计算式，如果取不到a,b的有效位则补零
@@ -67,6 +72,6 @@ public class Solution {
             carry = ( numA + numB + carry >= 2) ? 1 : 0;  //更新进位
             sb.append(result);
         }
-        return sb.reverse().toString();
+        return sb.reverse().toString();  //注意反转后再返回
     }
 }
