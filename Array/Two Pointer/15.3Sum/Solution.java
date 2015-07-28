@@ -1,13 +1,14 @@
 /**
-	找到输入数组中和为0的三个数组，结果可能有多组，每组答案要求升序排列
-	题目地址：https://leetcode.com/problems/3sum/
+ * 找到输入数组中和为0的三个数组，结果可能有多组，每组答案要求升序排列
+ * 题目地址：https://leetcode.com/problems/3sum/
+ * 类似题目：Two Sum, 3Sum Closest, 4Sum
 **/
 public class Solution {
 	/**
-		利用一个下标i从0遍历到数组倒数第三个, 
-		然后利用同two Sum中已排序输入两个指针的方法，从i+1到数组末尾来查找答案。
-		注意3个下标都要跳过重复值。这样结果集中就不会有重复结果
-		时间复杂度：O(N^2)
+	 *	利用一个下标i从0遍历到数组倒数第三个, 
+	 *	然后利用同two Sum中已排序输入两个指针的方法，从i+1到数组末尾来查找答案。
+	 *	注意3个下标都要跳过重复值。这样结果集中就不会有重复结果
+	 *	时间复杂度：O(N^2)
 	**/
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<> ();

@@ -1,7 +1,7 @@
 /**
-	从3Sum推广到4Sum，方法相同，可以推广到kSum. 
-	题目地址：https://leetcode.com/problems/4sum/
-	算法时间复杂度：O(N^3)
+ *	从3Sum推广到4Sum，方法相同，可以推广到kSum. 
+ *	题目地址：https://leetcode.com/problems/4sum/
+ *	算法时间复杂度：O(N^3)
 **/
 public class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {

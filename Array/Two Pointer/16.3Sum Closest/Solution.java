@@ -1,10 +1,11 @@
 /**
-	相比于3Sum,要找到与target相距最近的3元组和，且答案唯一。
-	题目地址：https://leetcode.com/problems/3sum-closest/
+ * 相比于3Sum,要找到与target相距最近的3元组和，且答案唯一。
+ * 题目地址：https://leetcode.com/problems/3sum-closest/
+ * 类似题目：3 Sum.
 **/
 public class Solution {
 	/**
-		设定一个最近和变量，每次遍历更新此变量。遍历方法同3Sum
+	 * 设定一个最接近target的变量，每次遍历更新此变量。遍历方法同3Sum
 	**/
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
