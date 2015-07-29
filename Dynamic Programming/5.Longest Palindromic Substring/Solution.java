@@ -1,8 +1,9 @@
 /**
-	寻找最长回文串（算法导论 15-2)，类似问题：LCS，即寻找两个字符串的最长子字符串
-	属于最优解问题（题目已明确只有一个最优解），由于Brute Force复杂度为O(N^3),而N = 1000,容易导致TLE
-	故使用动态规划（另也有对应的优化）
-	题目地址：https://leetcode.com/problems/longest-palindromic-substring/
+ * 寻找最长回文串（算法导论 15-2)，类似问题：LCS，即寻找两个字符串的最长子字符串
+ * 属于最优解问题（题目已明确只有一个最优解），由于Brute Force复杂度为O(N^3),而N = 1000,容易导致TLE
+ * 故使用动态规划（另也有对应的优化）
+ * 题目地址：https://leetcode.com/problems/longest-palindromic-substring/
+ * 类似问题：Shortest Palindrome
 **/
 public class Solution {
     public String longestPalindrome(String s) {
