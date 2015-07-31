@@ -1,16 +1,17 @@
 /**
-	ZigZag的形式进行二叉树层次遍历
-	题目地址：https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+ * ZigZag的形式进行二叉树层次遍历
+ * 题目地址：https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+ * 类似题目：Binary Tree Level Order Traversal 
 **/
 public class Solution {
 	/**
-		BFS进行层次遍历，需要添加一个代表当前层次的变量
-		在偶数层，要把当前层次链表反转后再加入结果集（假设root为第一层）
+	 * BFS进行层次遍历，需要添加一个代表当前层次的变量
+	 * 在偶数层，要把当前层次链表反转后再加入结果集（假设root为第一层）
 	**/
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<> ();
         if(root == null) return result;
-        LinkedList<TreeNode> queue = new LinkedList<> ();
+        Queue<TreeNode> queue = new LinkedList<> ();
         queue.add(root);
         int level = 1;
         

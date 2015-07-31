@@ -1,10 +1,11 @@
 /**
-	二叉树层次遍历，照例有DFS和BFS两种解法
-	题目地址：https://leetcode.com/problems/binary-tree-level-order-traversal/
+ * 二叉树层次遍历，照例有DFS和BFS两种解法
+ * 题目地址：https://leetcode.com/problems/binary-tree-level-order-traversal/
+ * 类似题目：Binary Tree Level Order Traversal II，Minimum Depth of Binary Tree
 **/
 public class Solution {
 	/**
-		DFS递归来层次遍历，对先序遍历略作修改，每次递归调用传入当前层次。
+	 * DFS递归来层次遍历，对先序遍历略作修改，每次递归调用传入当前层次。
 	**/
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<> ();
@@ -28,7 +29,7 @@ public class Solution {
     }
 	
 	/**
-		BFS迭代来层次遍历，注意队列的使用。
+	 * BFS迭代来层次遍历，注意队列的使用。
 	**/
 	public List<List<Integer>> levelOrder2(TreeNode root) {
         List<List<Integer>> result = new ArrayList<> ();

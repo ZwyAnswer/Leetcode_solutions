@@ -1,11 +1,12 @@
 /**
-	二叉树基本操作：中序遍历
-	题目地址：https://leetcode.com/problems/binary-tree-inorder-traversal/
+ * 二叉树基本操作：中序遍历(left-root-right)
+ * 题目地址：https://leetcode.com/problems/binary-tree-inorder-traversal/
+ * 类似题目：Binary Tree Preorder/Postorder Traversal 
 **/
 public class Solution {
 	/**
-		根据二叉树和中序遍历天然的递归定义，递归实现
-		run time:300 ms
+	 * 根据二叉树和中序遍历天然的递归定义，递归实现
+	 * run time:300 ms
 	**/
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<> ();
@@ -21,11 +22,11 @@ public class Solution {
     }
 	
 	/**
-		迭代中序遍历，重点在于栈的利用
+	 * 迭代中序遍历，重点在于栈的利用
 	**/
 	public List<Integer> inorderTraversal2(TreeNode root) {
         List<Integer> result = new ArrayList<> ();
-        Stack<TreeNode> stack = new Stack<> ();
+        Stack<TreeNode> stack = new Stack<> ();  //关键
         if(root == null) return result;
         TreeNode current = root;
         
