@@ -5,6 +5,7 @@
 	-Character.isWhitespace(char c), 判断给定字符是否是空白符
 	-Character.isDigit(char c), 判断给定字符是否是数字
 	-Character.getNumericValue(char c), 返回给定字符对应是数值（也可以使用 (int)(c - '0') 
+	-Character.isLetterOrDigit(char c), 判断给定字符是否是有效字符(a-z)或数字(0-9)
 
 # Java String\ StringBuilder API
 	StringBuilder sb = new StringBuilder();

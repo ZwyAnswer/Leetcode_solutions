@@ -3,7 +3,6 @@
  * 几个问题： 1.负数是否是回文数？-不是
  * 2. 不能使用额外空间，故不能转化为String来处理
  * 3. 可以将int值反转，注意溢出。
- * 4.
  * 题目地址：https://leetcode.com/problems/palindrome-number/
  * 类似题目：Reverse Integer
 **/

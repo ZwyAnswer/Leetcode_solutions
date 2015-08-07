@@ -7,15 +7,15 @@ public class Solution {
         if(head == null) return head;
         ListNode pHead = new ListNode(0);   
         pHead.next = head;   
-        ListNode prev = pHead;
-        for(int i = 0; i < m-1; i++) prev = prev.next;  //找到插入结点处
-        ListNode start = prev.next, reverse = start.next;  //反转结点的前一个结点，当前反转结点
+        ListNode start = pHead;
+        for(int i = 0; i < m-1; i++) start = start.next;  //找到插入结点处
+        ListNode prev = start.next, reverse = prev.next;  //反转结点的前一个结点，当前反转结点
         
         for(int i = 0; i < n-m; i++) {
-            start.next = reverse.next;
-            reverse.next = prev.next;
-            prev.next = reverse;
-            reverse = start.next;
+            prev.next = reverse.next;
+            reverse.next = start.next;
+            start.next = reverse;
+            reverse = prev.next;
         }
         return pHead.next;
     }

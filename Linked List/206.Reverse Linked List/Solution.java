@@ -1,6 +1,7 @@
 /**
  * 反转单链表，可以迭代或者递归来反转 
  * 题目地址：https://leetcode.com/problems/reverse-linked-list/
+ * 相似题目：Palindrome Linked List
 **/
 public class Solution {
 	//递归式反转，依然为头插
