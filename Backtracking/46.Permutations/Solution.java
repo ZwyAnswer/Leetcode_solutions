@@ -1,6 +1,7 @@
 /**
- *	求给定数组的排列(非全排列，每个位置的数不能重复）
- *	题目地址：https://leetcode.com/problems/permutations/
+ * 求给定数组的排列(非全排列，每个位置的数不能重复）
+ * 题目地址：https://leetcode.com/problems/permutations/
+ * 类似题目：Permutations II，Next Permutation，Permutation Sequence
 **/
 public class Solution {
 	/**

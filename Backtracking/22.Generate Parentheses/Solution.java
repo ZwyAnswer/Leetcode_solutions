@@ -1,6 +1,7 @@
 /**
  * 给定n，输出所有合法匹配的左右括号组合
  * 题目地址：https://leetcode.com/problems/generate-parentheses/
+ * 类似题目：Letter Combinations of a Phone Number， Valid Parentheses
 **/
 public class Solution {
 

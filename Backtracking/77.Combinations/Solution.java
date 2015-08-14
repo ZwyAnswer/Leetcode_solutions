@@ -1,6 +1,7 @@
 /**
  * 求给定[1...n]的包含k个数的组合
  * 题目地址：https://leetcode.com/problems/combinations/
+ * 类似题目：Combination Sum， Permutations 
 **/
 public class Solution {
 	/**
@@ -10,7 +11,7 @@ public class Solution {
     public List<List<Integer>> combine(int n, int k) {
         if( k == n || k == 0) {  //递归终止条件，k==0返回空，k=n,返回1..n
             List<Integer> answer = new ArrayList<> ();
-            for( int i = 1; i <=k; i++) {
+            for( int i = 1; i <= k; i++) {
                 answer.add(i);
             }
             return new ArrayList<> (Arrays.asList(answer));  //将数组转换为数组列表，如[1,2]-->[[1,2]]

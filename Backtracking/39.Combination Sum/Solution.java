@@ -1,6 +1,7 @@
 /**
  * 给定数字集合(注意是集合，即candidates中不含重复数)，找到其中组合的和为给定数的所有组合
  * 题目地址：https://leetcode.com/problems/combination-sum/
+ * 类似问题：Combination Sum II， Combination Sum III， Letter Combinations of a Phone Number
 **/
 public class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
