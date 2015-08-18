@@ -1,13 +1,14 @@
 /**
-	找出给出String数组的所有可以组成anagram的词
-	关于如何判断两个词是否是anagram，可以参考CrackTheCodingInterview的Question1.3
-	题目地址：https://leetcode.com/problems/anagrams/
+ * 找出给出String数组的所有可以组成anagram的词
+ * 关于如何判断两个词是否是anagram，可以参考CrackTheCodingInterview的Question1.3
+ * 题目地址：https://leetcode.com/problems/anagrams/
+ * 类似题目：Valid Anagram
 **/
 public class Solution {
 	/**
-		使用sort来判断anagram，
-		使用HashMap，key为Sort后的String，value为sort前的String
-		这样所有构成anagram的String均对应同一个key
+	 * 使用sort来判断anagram，
+	 * 使用HashMap，key为Sort后的String，value为sort前的String
+	 * 这样所有构成anagram的String均对应同一个key
 	**/
     public List<String> anagrams(String[] strs) {
         List<String> result = new ArrayList<> ();
