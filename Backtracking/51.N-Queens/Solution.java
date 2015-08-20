@@ -27,7 +27,7 @@ public class Solution {
     //检查是否符合八皇后规则，因为每行是依次摆并检查的，所以只检查列和对角线
     public boolean isValid(int[] colByRow, int row, int col) {
         for(int i = 0; i < row; i++) {
-            if(colByRow[i] == col) return false;  //是否同行
+            if(colByRow[i] == col) return false;  //是否同列
             int colDistance = Math.abs(colByRow[i] - col), rowDistance = row - i;
             if(colDistance == rowDistance) return false;  //是否同对角线
         }

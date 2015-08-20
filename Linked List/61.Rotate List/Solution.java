@@ -1,6 +1,7 @@
 /**
  * 对链表进行右移k步，k为非负数
  * 题目地址：https://leetcode.com/problems/rotate-list/
+ * 类似题目：Rotate Array
 **/
 public class Solution {
     public ListNode rotateRight(ListNode head, int k) {
